@@ -122,6 +122,20 @@ window.onload=function () {
 		pp.innerHTML="<img src='imgs/pp1.jpeg'>";
 		h1.style.border="none";
 	}
+	var lc=document.getElementById('lc');
+	var rc=document.getElementById('rc');
+	lc.onclick=function(){
+		h1.style.border="1px #ff9003 solid";
+		Bi.innerHTML="<img src='imgs/pbig0.jpg'>";
+		pp.innerHTML="<img src='imgs/pp0.jpeg'>";
+		h2.style.border="none";
+	}
+	rc.onclick=function(){
+		h2.style.border="1px #ff9003 solid";
+		Bi.innerHTML="<img src='imgs/pbig1.jpg'>";
+		pp.innerHTML="<img src='imgs/pp1.jpeg'>";
+		h1.style.border="none";
+	}
 }
 
 
