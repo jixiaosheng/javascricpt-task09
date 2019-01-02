@@ -1,12 +1,22 @@
 function money(){
-		var ins=document.createElement('span');
-		var dd=document.getElementById('dd');
-		var m=document.getElementById('s').value;
-		ins.innerHTML="<span>"+"￥"+m+"</span>";
-		dd.appendChild(ins);
-		dd.replaceChild(ins,dd.childNodes[0]);
+	var ins=document.createElement('span');
+	var dd=document.getElementById('dd');
+	var m=document.getElementById('s').value;
+	ins.innerHTML="<span>"+"￥"+m+"</span>";
+	dd.appendChild(ins);
+	dd.replaceChild(ins,dd.childNodes[0]);
 }
 window.onload=function () {  
+	var sA=document.getElementsByClassName('sA')[0];
+	var box=document.getElementById('box');
+	window.onscroll=function(){
+		var st=document.documentElement.scrollTop||document.body.scrollTop;
+		if (st>165) {
+			sA.style.position='fixed';
+		}else{
+			sA.style.position='static';
+		}   
+	}
 	function getStylee(obj,style) {  
 		if(obj.currentStyle) {  
 			return obj.currentStyle[style];  
@@ -40,54 +50,43 @@ window.onload=function () {
 	}
 	fun(bo1);
 	bo2.onmouseover=function(){
-			timera=setInterval(function(){
-				if(parseInt(getStylee(bo2,'left'))>1142){
-					bo2.style.left=parseInt(getStylee(bo2,'left'))-5+'px';
-				}
-			},30)
-			clearInterval(timer1a);
-		}
-		bo2.onmouseout=function(){
-			timer1a=setInterval(function(){
-				if(parseInt(getStylee(bo2,'left'))!=1220){
-					bo2.style.left=parseInt(getStylee(bo2,'left'))+5+'px';
-				}
-			},10)
-			clearInterval(timera);
-		}
-		var bi=document.getElementById('bi');
-	bo3.onmouseover=function(){
-			timerb=setInterval(function(){
-				if(parseInt(getStylee(bo3,'left'))>1142){
-					bo3.style.left=parseInt(getStylee(bo3,'left'))-5+'px';
-				}
-			},30)
-			clearInterval(timer1b);
-            bi.style.backgroundImage="url('imgs/erwei.png')";
-            bi.style.backgroundPosition='10px 10px';
-		}
-		bo3.onmouseout=function(){
-			timer1b=setInterval(function(){
-				if(parseInt(getStylee(bo3,'left'))!=1220){
-					bo3.style.left=parseInt(getStylee(bo3,'left'))+5+'px';
-				}
-			},10)
-			clearInterval(timerb);
-			bi.style.backgroundImage="url('imgs/serwei.png')";
-			bi.style.backgroundPosition='10px 40px';
-		}
-	fun(bo4);
-	var sA=document.getElementsByClassName('sA')[0];
-	var box=document.getElementById('box');
-	window.onscroll=function(){
-		var st=document.documentElement.scrollTop||document.body.scrollTop;
-		if (st>165) {
-			sA.style.position='fixed';
-			box.style.zIndex="-1";
-		}else{
-			sA.style.position='static';
-		}   
+		timera=setInterval(function(){
+			if(parseInt(getStylee(bo2,'left'))>1142){
+				bo2.style.left=parseInt(getStylee(bo2,'left'))-5+'px';
+			}
+		},30)
+		clearInterval(timer1a);
 	}
+	bo2.onmouseout=function(){
+		timer1a=setInterval(function(){
+			if(parseInt(getStylee(bo2,'left'))!=1220){
+				bo2.style.left=parseInt(getStylee(bo2,'left'))+5+'px';
+			}
+		},10)
+		clearInterval(timera);
+	}
+	var bi=document.getElementById('bi');
+	bo3.onmouseover=function(){
+		timerb=setInterval(function(){
+			if(parseInt(getStylee(bo3,'left'))>1142){
+				bo3.style.left=parseInt(getStylee(bo3,'left'))-5+'px';
+			}
+		},30)
+		clearInterval(timer1b);
+		bi.style.backgroundImage="url('imgs/erwei.png')";
+		bi.style.backgroundPosition='10px 10px';
+	}
+	bo3.onmouseout=function(){
+		timer1b=setInterval(function(){
+			if(parseInt(getStylee(bo3,'left'))!=1220){
+				bo3.style.left=parseInt(getStylee(bo3,'left'))+5+'px';
+			}
+		},10)
+		clearInterval(timerb);
+		bi.style.backgroundImage="url('imgs/serwei.png')";
+		bi.style.backgroundPosition='10px 40px';
+	}
+	fun(bo4);
 	var oNavlist = document.getElementById('nav').children;
 	var slider = document.getElementById('slider');
 	var left = document.getElementById('left');
