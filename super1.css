@@ -7,6 +7,7 @@
 	height: auto;
 	border-bottom:1px #fe6c00 solid;
 	z-index: 1;
+	margin: 0 auto;
 }
 .A{
 	width: 1180px;
@@ -130,7 +131,9 @@ a{
 #a1{
 	width: 1180px;
 	height: 549px;
-	margin: 0 auto;
+	position: fixed;
+	left: 50%;
+	margin-left: -590px;
 }
 #b1{
 	width: 170px;

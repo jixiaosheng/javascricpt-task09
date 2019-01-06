@@ -384,9 +384,11 @@
             var top = lul.offsetTop - 1; //获取left值
             lul.style.top = top + "px"; //设置left值
 
-            //走完一半再返回
-            if (-1 * lul.offsetTop >= lul.offsetHeight) {
+            if (-0.8*lul.offsetTop >= lul.offsetHeight) {
                 lul.style.top = 0;
+            }
+            else{
+            	lul.style.top++;
             }
         }
         var t = setInterval(show, 20);
