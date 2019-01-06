@@ -206,7 +206,7 @@ a{
 }
 #sup{
 	color: #ff0754;
-	margin-left:60px;
+	margin-left:70px;
 	font-size: 15px;
 	margin-top: 20px;
 	float: left;
@@ -220,14 +220,17 @@ a{
 	float: left;
 }
 #j1{
+	outline-style: none;
 	background-repeat: no-repeat;
 	background-position: 50px 17px;
 	width: 60px;
 	height: 30px;
-	border:none;
 	text-align: center;
+	border:0.5px #ff0754 solid;
+    background-image: url(imgs/duigou.png);
 }
 #j2{
+	outline-style: none;
 	background-repeat: no-repeat;
 	background-position: 50px 17px;
 	width: 60px;

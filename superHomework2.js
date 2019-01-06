@@ -12,17 +12,20 @@ window.onload=function () {
 	var j1=document.getElementById('j1');
 	var j2=document.getElementById('j2');
 	var x1=document.getElementById('x1');
+	x1.innerHTML="<span>"+"''150ml''"+"</span>";
 	j1.onmousedown=function(){		
 		x1.innerHTML="<span>"+"''150ml''"+"</span>";
 		j1.style.border="0.5px #ff0754 solid";
 		j1.style.backgroundImage="url('imgs/duigou.png')";
-		j2.style="none";
+		j2.style.border="none";
+		j2.style.backgroundImage="none";
 	}
 	j2.onmousedown=function(){
 		x1.innerHTML="<span>"+"''200ml''"+"</span>";
 		j2.style.border="0.5px #ff0754 solid";
 		j2.style.backgroundImage="url('imgs/duigou.png')";
-		j1.style="none";
+		j1.style.border="none";
+		j1.style.backgroundImage="none"
 	}
 	var pt1=document.getElementById('pt1');
 	var pt2=document.getElementById('pt2');
@@ -89,7 +92,7 @@ window.onload=function () {
 	a2.onmousemove=function(ev){
 		var ev=ev||event;
 
-		var oL=ev.clientX-a1.offsetLeft-22-slider.offsetWidth/2;//
+		var oL=ev.clientX-a1.offsetLeft-22-slider.offsetWidth/2;
 		var oT=ev.clientY-a1.offsetTop-22-slider.offsetHeight/2;
 
 		var oMaxw=a2.offsetWidth-slider.offsetWidth;
