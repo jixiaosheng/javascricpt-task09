@@ -343,16 +343,17 @@ a{
 	width: auto;	
 }
 #bo1{
-	top: 20px;
-	position: absolute;
-	left: 1220px;
+	top: 70px;
+	position: fixed;
+	right: -89px;
+	z-index: 2;
 }
 #bo2{
 	width:125px;
 	background-color: #ff9260;
-	position: absolute;
-	top: 127px;
-	left: 1220px;
+	position: fixed;
+	top: 177px;
+	right: -85px;
 	height: 144px;
 }
 #dl1{
@@ -374,8 +375,8 @@ a{
 	background-repeat: no-repeat;
 }
 #bo4{
-	top: 423px;
-	position: absolute;
-	left: 1220px;
+	top: 473px;
+	position: fixed;
+	right: -83px;
 	display: block;
 }

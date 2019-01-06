@@ -33,34 +33,49 @@ window.onload=function () {
 	function fun(a){
 		a.onmouseover=function(){
 			timer=setInterval(function(){
-				if(parseInt(getStylee(a,'left'))>=1142){
-					a.style.left=parseInt(getStylee(a,'left'))-5+'px';
+				if(parseInt(getStylee(a,'right'))>=-83&&parseInt(getStylee(a,'right'))<=-10){
+					a.style.right=parseInt(getStylee(a,'right'))+5+'px';
 				}
 			},30)
 			clearInterval(timer1);
 		}
 		a.onmouseout=function(){
 			timer1=setInterval(function(){
-				if(parseInt(getStylee(a,'left'))!=1220){
-					a.style.left=parseInt(getStylee(a,'left'))+5+'px';
+				if(parseInt(getStylee(a,'right'))!=-83){
+					a.style.right=parseInt(getStylee(a,'right'))-5+'px';
 				}
 			},10)
 			clearInterval(timer);
 		}
 	}
-	fun(bo1);
+	bo1.onmouseover=function(){
+		timerc=setInterval(function(){
+			if(parseInt(getStylee(bo1,'right'))>=-89&&parseInt(getStylee(bo1,'right'))<=-10){
+				bo1.style.right=parseInt(getStylee(bo1,'right'))+5+'px';
+			}
+		},30)
+		clearInterval(timer1c);
+	}
+	bo1.onmouseout=function(){
+		timer1c=setInterval(function(){
+			if(parseInt(getStylee(bo1,'right'))!=-89){
+				bo1.style.right=parseInt(getStylee(bo1,'right'))-5+'px';
+			}
+		},10)
+		clearInterval(timerc);
+	}
 	bo2.onmouseover=function(){
 		timera=setInterval(function(){
-			if(parseInt(getStylee(bo2,'left'))>1142){
-				bo2.style.left=parseInt(getStylee(bo2,'left'))-5+'px';
+			if(parseInt(getStylee(bo2,'right'))>=-85&&parseInt(getStylee(bo2,'right'))<=-10){
+				bo2.style.right=parseInt(getStylee(bo2,'right'))+5+'px';
 			}
 		},30)
 		clearInterval(timer1a);
 	}
 	bo2.onmouseout=function(){
 		timer1a=setInterval(function(){
-			if(parseInt(getStylee(bo2,'left'))!=1220){
-				bo2.style.left=parseInt(getStylee(bo2,'left'))+5+'px';
+			if(parseInt(getStylee(bo2,'right'))!=-85){
+				bo2.style.right=parseInt(getStylee(bo2,'right'))-5+'px';
 			}
 		},10)
 		clearInterval(timera);
@@ -68,8 +83,8 @@ window.onload=function () {
 	var bi=document.getElementById('bi');
 	bo3.onmouseover=function(){
 		timerb=setInterval(function(){
-			if(parseInt(getStylee(bo3,'left'))>1142){
-				bo3.style.left=parseInt(getStylee(bo3,'left'))-5+'px';
+			if(parseInt(getStylee(bo3,'right'))>=-85&&parseInt(getStylee(bo3,'right'))<=-10){
+				bo3.style.right=parseInt(getStylee(bo3,'right'))+5+'px';
 			}
 		},30)
 		clearInterval(timer1b);
@@ -78,8 +93,8 @@ window.onload=function () {
 	}
 	bo3.onmouseout=function(){
 		timer1b=setInterval(function(){
-			if(parseInt(getStylee(bo3,'left'))!=1220){
-				bo3.style.left=parseInt(getStylee(bo3,'left'))+5+'px';
+			if(parseInt(getStylee(bo3,'right'))!=-85){
+				bo3.style.right=parseInt(getStylee(bo3,'right'))-5+'px';
 			}
 		},10)
 		clearInterval(timerb);
